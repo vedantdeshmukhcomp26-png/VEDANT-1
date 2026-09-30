@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elite Sports Cars</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, #111, #1c1c1c);
+            padding: 30px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff2b2b;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff2b2b;
+        }
+
+        .hero {
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
+                url("https://images.unsplash.com/photo-1503736334956-4c8f8e92946d")
+                center/cover;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 80px);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        .hero p {
+            margin-top: 15px;
+            color: #ccc;
+            font-size: 18px;
+        }
+
+        .cars-section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+        }
+
+        .section-title span {
+            color: #ff2b2b;
+        }
+
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .car-card {
+            background: #151515;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #292929;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 43, 43, 0.2);
+        }
+
+        .car-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .car-info {
+            padding: 25px;
+        }
+
+        .car-info h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .car-info p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .specs {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            color: #ddd;
+        }
+
+        .spec {
+            text-align: center;
+        }
+
+        .spec strong {
+            display: block;
+            color: #ff2b2b;
+            font-size: 18px;
+        }
+
+        .button {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            background: #ff2b2b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #d90000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">APEX CARS</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#cars">Cars</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <h1>Sports Cars</h1>
+        <p>Discover some of the world's most exciting performance cars.</p>
+    </section>
+
+
+    <section class="cars-section" id="cars">
+
+        <div class="section-title">
+            <h2>Featured <span>Cars</span></h2>
+            <p>Performance. Design. Engineering.</p>
+        </div>
+
+
+        <div class="car-grid">
+
+            <!-- Ferrari -->
+            <div class="car-card">
+                <img
+                    class="car-image"
+                    src="https://images.unsplash.com/photo-1592198084033-aade902d1aae"
+                    alt="Red Ferrari sports car"
+                >
+
+                <div class="car-info">
+                    <h3>Ferrari</h3>
+
+                    <p>
+                        Italian performance and distinctive styling
+                        combined into an iconic sports car.
+                    </p>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <strong>V8</strong>
+                            Engine
+                        </div>
+
+                        <div class="spec">
+                            <strong>3.0s</strong>
+                            0–100 km/h
+                        </div>
+
+                        <div class="spec">
+                            <strong>330+</strong>
+                            km/h
+                        </div>
+                    </div>
+
+                    <a href="#" class="button">View Details</a>
+                </div>
+            </div>
+
+
+            <!-- Lamborghini -->
+            <div class="car-card">
+                <img
+                    class="car-image"
+                    src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a"
+                    alt="Lamborghini sports car"
+                >
+
+                <div class="car-info">
+                    <h3>Lamborghini</h3>
+
+                    <p>
+                        Aggressive design, dramatic performance,
+                        and unmistakable Italian character.
+                    </p>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <strong>V10</strong>
+                            Engine
+                        </div>
+
+                        <div class="spec">
+                            <strong>2.9s</strong>
+                            0–100 km/h
+                        </div>
+
+                        <div class="spec">
+                            <strong>350+</strong>
+                            km/h
+                        </div>
+                    </div>
+
+                    <a href="#" class="button">View Details</a>
+                </div>
+            </div>
+
+
+            <!-- Porsche -->
+            <div class="car-card">
+                <img
+                    class="car-image"
+                    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
+                    alt="Porsche sports car"
+                >
+
+                <div class="car-info">
+                    <h3>Porsche 911</h3>
+
+                    <p>
+                        A legendary sports car combining everyday
+                        usability with serious performance.
+                    </p>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <strong>Flat-6</strong>
+                            Engine
+                        </div>
+
+                        <div class="spec">
+                            <strong>3.2s</strong>
+                            0–100 km/h
+                        </div>
+
+                        <div class="spec">
+                            <strong>300+</strong>
+                            km/h
+                        </div>
+                    </div>
+
+                    <a href="#" class="button">View Details</a>
+                </div>
+            </div>
+
+
+            <!-- McLaren -->
+            <div class="car-card">
+                <img
+                    class="car-image"
+                    src="https://images.unsplash.com/photo-1621135802920-133df287f89c"
+                    alt="McLaren sports car"
+                >
+
+                <div class="car-info">
+                    <h3>McLaren</h3>
+
+                    <p>
+                        Lightweight engineering and aerodynamic
+                        design focused on driving performance.
+                    </p>
+
+                    <div class="specs">
+                        <div class="spec">
+                            <strong>V8</strong>
+                            Engine
+                        </div>
+
+                        <div class="spec">
+                            <strong>2.8s</strong>
+                            0–100 km/h
+                        </div>
+
+                        <div class="spec">
+                            <strong>340+</strong>
+                            km/h
+                        </div>
+                    </div>
+
+                    <a href="#" class="button">View Details</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Apex Cars | Sports Car Showcase</p>
+    </footer>
+
+</body>
+</html>
